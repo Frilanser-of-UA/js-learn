@@ -87,8 +87,8 @@ out13.textContent += 'Flamel';
 // Task 14
 // Создайте переменную g141 куда получите ЧИСЛО из .out-141. Создайте переменную g142, куда получите ЧИСЛО из .out-142. Выведите сумму переменных g141 и g142 в .out-14.
 
-let g141 = document.querySelector('.out-141').textContent;
-let g142 = document.querySelector('.out-142').textContent;
+let g141 = parseInt(document.querySelector('.out-141').textContent);
+let g142 = parseInt(document.querySelector('.out-142').textContent);
 document.querySelector('.out-14').textContent = g141 + g142;
 
 // Task 15
@@ -107,7 +107,8 @@ title.textContent = 'Sprint 3';
 // Создана переменная g17. Запишите в нее значение g17 * 10. Выведите g17 в .out-17.
 
 let g17 = 55;
-document.querySelector('.out-17').textContent = g17 * 10;
+g17 = g17 * 10;
+document.querySelector('.out-17').textContent = g17;
 
 // Task 18
 // Создайте константу m18 содержащую пустую строку. Выведите константу в .out-18.
