@@ -106,7 +106,7 @@ document.querySelector('.b-7').onclick = t07;
 // Создана функция t08. Функция запускается при нажатии .b-8. Функция читает год рождения из input.i-8 и если пользователю больше 16 лет, то выводит единицу в .out-8. Если пользователю меньше 16 лет, то выводит в .out-8 число -1. Если пользователю 16 лет, то выводит 0.
 
 function t08 () {
-    let num8 = +document.querySelector('.i-8').value;
+    let num8 = 2024 - +document.querySelector('.i-8').value;
     if(num8 > 16){
         document.querySelector('.out-8').textContent = 1;
     } else if(num8 < 16){
@@ -190,11 +190,7 @@ document.querySelector('.b-12').onclick = t12;
 let bool = true;
 
 function t13 () {
-    if(bool){
-        document.querySelector('.out-13').textContent = !bool
-    }
-   
-    
+    document.querySelector('.out-13').textContent = !bool
 }
 
 document.querySelector('.b-13').onclick = t13;
