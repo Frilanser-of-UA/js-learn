@@ -67,7 +67,7 @@ document.querySelector('.b-4').onclick = t04;
 function t05 () {
     let i5 = +document.querySelector('.i-5').value;
     let item5 = '';
-    for(i = 0; i < i5; i = i + 2 ){
+    for(i = 0; i <= i5; i = i + 2 ){
         item5 += i + '_';
     }
     document.querySelector('.out-5').textContent = item5;
@@ -230,8 +230,7 @@ document.querySelector('.b-14').onclick = t14;
 function t15() {
     const d15 = document.querySelectorAll('.d-15');
     for (let i = 0; i < d15.length; i++) {
-        if(i % 2 != 0)
-         d15[i].style.backgroundColor = 'lightsalmon';
+        if(i % 2 == 0) d15[i].style.background = 'paleturquoise';
     }
 }
 
