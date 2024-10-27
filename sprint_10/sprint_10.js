@@ -91,7 +91,7 @@ document.querySelector('.b-8').onclick = t08;
 
 function t09 () {
     const ch9 = document.querySelector('.ch-9');
-    ch9.checked = true;
+    ch9.setAttribute('checked', true);
 }
 
 document.querySelector('.b-9').onclick = t09;
