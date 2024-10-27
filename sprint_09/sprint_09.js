@@ -291,12 +291,11 @@ document.querySelector('.b-16').onclick = t16;
 
 
 
+let divs17 = document.querySelectorAll('.d-17');
 function t17 () {
-    let divs17 = document.querySelectorAll('.d-17');
     let k17 = 0;
-    
     do {
-        divs17[k17].textContent = k17 + '. ' + divs17[k17].textContent;
+        divs17[k17].textContent = (k17 + 1) + '. ' + divs17[k17].textContent;
         k17++;
     } while (k17 < divs17.length);
 }
@@ -343,11 +342,12 @@ let summ = 0;
 
 function t20() {
     let k20 = 0;
+    let total = document.querySelector('.total');
     do{
-        summ += +tdPrice[k20].textContent;
+        if(+total.textContent == 0) summ += +tdPrice[k20].textContent;
         k20++;
     }while(k20 < tdPrice.length);
-    document.querySelector('.total').textContent = summ;
+    total.textContent = summ;
 }
 
 document.querySelector('.b-20').onclick= t20;
