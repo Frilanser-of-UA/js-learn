@@ -23,7 +23,8 @@ document.querySelector('.b-2').onclick = t02;
 
 function t03 () {
     const out3 = document.querySelector('.out-3');
-    out3.textContent = out3.classList.contains('bg-orange');
+    const block3 = document.querySelector('.block-3');
+    out3.textContent = block3.classList.contains('bg-orange');
     
 }
 
