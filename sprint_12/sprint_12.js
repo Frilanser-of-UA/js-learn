@@ -86,7 +86,7 @@ function t07 () {
     createEl7.classList.add('s-7');
     createOpt1.value = '22';
     createOpt1.textContent = 'Лето II Атрейдес';
-    createOpt2.value = '23';
+    createOpt2.value = '33';
     createOpt2.textContent = 'Дункан Айдахо';
     createEl7.append(createOpt1);
     createEl7.append(createOpt2);
