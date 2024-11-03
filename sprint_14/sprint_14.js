@@ -240,7 +240,8 @@ document.querySelector('.b-14').onclick = () => {
 // тут напишите функцию t15
 
 const t15 = (classEl) => {
-	if (document.classList.contain(classEl)) classEl = true;
+    const page = document.querySelector('html');
+	if (page.classList.contains(classEl)) classEl = true;
 	else classEl = false;
 	return classEl;
 }
@@ -255,6 +256,11 @@ document.querySelector('.b-15').onclick = () => {
 
 // тут напишите функцию t16
 
+const t16 = (mail) =>{
+    if(mail.includes('@')) mail = true;
+    else mail = false;
+    return mail;
+}
 document.querySelector('.b-16').onclick = () => {
 	document.querySelector('.out-16').textContent = t16('example@mail.ua');
 }
@@ -265,7 +271,7 @@ document.querySelector('.b-16').onclick = () => {
 
 
 // тут пишите стрелочную функцию t17
-
+const t17 = () => 10;
 document.querySelector('.b-17').onclick = () => {
 	document.querySelector('.out-17').textContent = (t17() + 5 === 15);
 }
@@ -276,7 +282,7 @@ document.querySelector('.b-17').onclick = () => {
 
 
 // тут пишите стрелочную функцию t18
-
+const t18 = () => 2;
 document.querySelector('.b-18').onclick = () => {
 	document.querySelector('.out-18').textContent = ((100 - 10 * t18()) / t18()) === 40;
 }
@@ -287,7 +293,7 @@ document.querySelector('.b-18').onclick = () => {
 // Напишите стрелочную функцию t19, которая возвращает булево значение, такое, чтобы выражение ниже давало true.
 
 // тут пишите стрелочную функцию t19
-
+const t19 = () => false;
 document.querySelector('.b-19').onclick = () => {
 	document.querySelector('.out-19').textContent = !t19();
 }
@@ -297,7 +303,7 @@ document.querySelector('.b-19').onclick = () => {
 // Напишите стрелочную функцию t20, которая возвращает булево значение, такое, чтобы выражение ниже давало true.
 
 // тут пишите стрелочную функцию t20
-
+const t20 = () => true;
 document.querySelector('.b-20').onclick = () => {
 	document.querySelector('.out-20').textContent = (true !== !t20());
 }
