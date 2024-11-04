@@ -112,13 +112,13 @@ document.querySelector('.b-10').onclick = function () {
 // Напишите функцию t11, которая принимает три числа как аргументы и выводит в .out-11 меньшее из трех чисел.
 
 // тут напишите функцию t11
+function t11(a, b, c) {
+    const out11 = document.querySelector('.out-11');
+    out11.textContent = Math.min(a, b, c);
+}
 
 document.querySelector('.b-11').onclick = function () {
-    function t11(a, b, c) {
-        const out11 = document.querySelector('.out-11');
-        out11.textContent = Math.min(a,b,c);
-    }
-     t11(0,-8,10);  // снимите комментарий для проверки
+     t11(0, -8, 10);  // снимите комментарий для проверки
 }
 
 // Task 12
@@ -144,7 +144,7 @@ document.querySelector('.b-122').onclick = function () {
 
 // тут напишите функцию t13
 function t13(content){
-   dd
+    const out13 = document.querySelector('.out-13');
     const p13 = document.createElement('p');
     p13.textContent = content;
     out13.append(p13);
