@@ -240,10 +240,7 @@ document.querySelector('.b-14').onclick = () => {
 // тут напишите функцию t15
 
 const t15 = (classEl) => {
-    const page = document.querySelector('html');
-	if (page.classList.contains(classEl)) classEl = true;
-	else classEl = false;
-	return classEl;
+	return document.querySelector(classEl) ? true : false;
 }
 
 document.querySelector('.b-15').onclick = () => {
