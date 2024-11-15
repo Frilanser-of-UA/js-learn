@@ -26,10 +26,10 @@ const t02 = () => {
   const i2 = +document.querySelector('.i-2').value;
   const out2 = document.querySelector('.out-2');
   if(arr_02.includes(i2)){
-    out2.textContent = arr_02.join("-");
+    out2.textContent = arr_02.join(" ");
   } else{
     arr_02.push(i2);
-    out2.textContent = arr_02.join("-");
+    out2.textContent = arr_02.join(" ");
   }
   
 }
@@ -58,7 +58,12 @@ document.querySelector('.b-3').addEventListener('click', () => {
 let arr_04 = ["joust", "river raid", "seaquest", "asteroids", "dig dug"];
 
 const t04 = () => {
-   
+    const out4 = document.querySelector('.out-4');
+   for (let i = 0; i < arr_04.length; i++) {
+    if(i % 2 == 0){
+        out4.textContent += i + '_';
+    }
+   } 
 }
 
 document.querySelector('.b-4').addEventListener('click', t04);
@@ -70,7 +75,12 @@ document.querySelector('.b-4').addEventListener('click', t04);
 let arr_05 = [22, 12, -9, 99, -8, -12, 55, 23];
 
 const t05 = () => {
-  
+    const out5 = document.querySelector('.out-5');
+    let arrMin = [0];
+    for (let i = 0; i < arr_05.length; i++) {
+        if(arr_05[i] < arrMin) arrMin = arr_05[i];
+    }
+    out5.textContent = arrMin;
 }
 
 document.querySelector('.b-5').addEventListener('click', t05);
@@ -82,7 +92,12 @@ document.querySelector('.b-5').addEventListener('click', t05);
 const arr_06 = ["joust", "river raid", "seaquest", "asteroids", "dig dug"];
 
 const t06 = () => {
-  
+    const out6 = document.querySelector('.out-6');
+    let arrMax = [''];
+    for (let i = 0; i < arr_06.length; i++) {
+       if(arr_06[i].length > arrMax.length) arrMax = arr_06[i];
+    }
+    out6.textContent = arrMax;
 }
 
 document.querySelector('.b-6').addEventListener('click', t06);
@@ -94,7 +109,11 @@ document.querySelector('.b-6').addEventListener('click', t06);
 const arr_07 = [55];
 
 const t07 = () => {
-   
+    const out7 = document.querySelector('.out-7');
+    let i7 = +document.querySelector('.i-7').value;
+    arr_07.push(i7);
+    arr_07.unshift(i7);
+    out7.textContent = arr_07.join('_');
 }
 
 document.querySelector('.b-7').addEventListener('click', t07);
@@ -106,7 +125,11 @@ document.querySelector('.b-7').addEventListener('click', t07);
 const arr_08 = ["OS", "Windows"];
 
 const t08 = (arr) => {
-   
+   const arrClon = [];
+   for (let i = 0; i < arr_08.length; i++) {
+    arrClon[i] = arr_08[i];
+   }
+   return arrClon;
 }
 
 document.querySelector('.b-8').addEventListener('click', () => {
