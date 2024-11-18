@@ -243,12 +243,11 @@ const arr_16 = [18, 18, 19, 19, 20, 20]; // ожидаю true
 //const arr_16 = [18, 18, 19, 1, 20, 20]; // а на этом примере даст false.
 
 const t16 = () => {
-    let bool;
+    
     for (let i = 0; i < arr_16.length; i = i + 2) {
-        if(arr_16[i] === arr_16[i + 1]) bool = true;
-        else return bool = false;
+        if(arr_16[i] !== arr_16[i + 1]) return false;
     }
-    return bool;
+    return true;
 }
 
 document.querySelector('.b-16').addEventListener('click', () => {
@@ -262,13 +261,16 @@ document.querySelector('.b-16').addEventListener('click', () => {
 const arr_17 = [100, 200, 300, 100, 200, 300];
 
 const t17 = (arr, n) => {
-   
+    let index = 0;
+    if(n == arr.includes(n)) index =  arr.lastIndexOf(n);
+    else index = arr.lastIndexOf(n);
+    return index;
 }
 
 document.querySelector('.b-17').addEventListener('click', () => {
     document.querySelector('.out-17').textContent = t17(arr_17, 200); // ожидаю 4
 });
-
+    
 
 // Task 18
 // Создан массив arr_18. Напишите функцию t18, которая применяет метод map, и функцию в методе t888. Результирующий массив выводится в .out-18, разделитель пробел. 
@@ -276,7 +278,9 @@ document.querySelector('.b-17').addEventListener('click', () => {
 const arr_18 = [11, 22, 33];
 
 const t18 = () => {
-    
+    const out18 = document.querySelector('.out-18');
+    const arrNew_18 = arr_18.map(t888);
+    out18.textContent = arrNew_18.join(' ');
 }
 
 const t888 = (item) => item + 10;
@@ -290,7 +294,11 @@ const arr_19 = [11, 22, 33];
 let res_19 = [];
 
 const t19 = () => {
-    
+    res_19 = arr_19.map((a) => {
+        if(a % 2 == 0) a = 0;
+    return a
+});
+    console.log(res_19);
 }
 
 document.querySelector('.b-19').addEventListener('click', t19);
@@ -306,7 +314,8 @@ arr_20[10] = 200;
 let res_20 = [];
 
 const t20 = () => {
-  
+    const res_20 = arr_20.map((item) => item * 2);
+    console.log(res_20);
 }
 
 document.querySelector('.b-20').addEventListener('click', t20);
@@ -318,7 +327,8 @@ document.querySelector('.b-20').addEventListener('click', t20);
 let arr_21 = ['Aa ', ' bB ', ' cC'];
 
 const t21 = () => {
-   
+    arr_21 = arr_21.map((item) => item.trim().toLowerCase());
+    console.log(arr_21);
 }
 
 document.querySelector('.b-21').addEventListener('click', t21);
@@ -330,7 +340,8 @@ document.querySelector('.b-21').addEventListener('click', t21);
 let arr_22 = [101, 201, 301, 401];
 
 const t22 = () => {
-   
+    arr_22 = arr_22.map((item, index) => item = index);
+    console.log(arr_22);
 }
 
 document.querySelector('.b-22').addEventListener('click', t22);
@@ -343,7 +354,10 @@ const arr_23 = [1, 101, 3, 102, 4, 201, 202, -9];
 let res_23 = [];
 
 const t23 = () => {
-    
+    res_23 = arr_23.filter((item) => {
+        if(item > 100) return item;
+    });
+    console.log(res_23);
 }
 
 document.querySelector('.b-23').addEventListener('click', t23);
@@ -356,7 +370,10 @@ const arr_24 = [1, 101, 3, 102, 4, 201, 202, -9];
 let res_24 = [];
 
 const t24 = () => {
- 
+    res_24 = arr_24.filter((item) => {
+        if(item % 2 == 0) return item;
+    });
+    console.log(res_24);
 }
 
 document.querySelector('.b-24').addEventListener('click', t24);
@@ -369,7 +386,10 @@ const arr_25 = ['test', '', 'best', '  ', 'rest'];
 let res_25 = [];
 
 const t25 = () => {
-   
+    res_25 = arr_25.filter((item) => {
+        if(item.trim() != '') return item;
+    });
+    console.log(res_25);
 }
 
 document.querySelector('.b-25').addEventListener('click', t25);
