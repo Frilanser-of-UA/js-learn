@@ -171,8 +171,9 @@ document.querySelector('.b-10').addEventListener('click', t10);
 let arr_11 = ["SUSE", "Unbreakable Linux", "Yellow Dog", "Slackware"];
 
 const t11 = () => {
- 
-
+ const i11 = document.querySelector('.i-11').value;
+ const out11 = document.querySelector('.out-11');
+ out11.textContent = [i11, ...arr_11].join(' ');
 }
 
 document.querySelector('.b-11').addEventListener('click', t11);
@@ -198,6 +199,8 @@ document.querySelector('.b-12').addEventListener('click', t12);
 const arr_13 = ["Slackware", "Slax", "Porteus", "Alpine Linux"];
 
 const t13 = () => {
+    const out13 = document.querySelector('.out-13');
+    out13.textContent = arr_13.at(2);
 }
 
 document.querySelector('.b-13').addEventListener('click', t13);
@@ -209,7 +212,9 @@ document.querySelector('.b-13').addEventListener('click', t13);
 const arr_14 = [666, 777, 888];
 
 const t14 = () => {
-   
+    const i14 = +document.querySelector('.i-14').value;
+    const out14 = document.querySelector('.out-14');
+    out14.textContent = arr_14.indexOf(i14);
 }
 
 document.querySelector('.b-14').addEventListener('click', t14);
@@ -221,7 +226,10 @@ document.querySelector('.b-14').addEventListener('click', t14);
 const arr_15 = [666, 777, 888];
 
 const t15 = () => {
-   
+    const i15 = +document.querySelector('.i-15').value;
+    const out15 = document.querySelector('.out-15');
+    if(arr_15.includes(i15)) out15.textContent = arr_15.indexOf(i15);
+    else out15.textContent = arr_15.includes(i15);
 }
 
 document.querySelector('.b-15').addEventListener('click', t15);
@@ -232,10 +240,15 @@ document.querySelector('.b-15').addEventListener('click', t15);
 // Создан массив arr_16. Напишите функцию, которая возвращает true, если в массиве пары чисел одинаковые, и false если нет. Массив всегда будет иметь четную длину.
 
 const arr_16 = [18, 18, 19, 19, 20, 20]; // ожидаю true
-// const arr_16 = [18, 18, 19, 1, 20, 20]; // а на этом примере даст false.
+//const arr_16 = [18, 18, 19, 1, 20, 20]; // а на этом примере даст false.
 
 const t16 = () => {
-  
+    let bool;
+    for (let i = 0; i < arr_16.length; i = i + 2) {
+        if(arr_16[i] === arr_16[i + 1]) bool = true;
+        else return bool = false;
+    }
+    return bool;
 }
 
 document.querySelector('.b-16').addEventListener('click', () => {
