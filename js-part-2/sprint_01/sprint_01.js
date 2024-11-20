@@ -21,8 +21,8 @@ console.log(arr_03);
 let arr_04 = ["Linux Mint", 19.1, "Tessa"];
 
 const t04 = () => {
-    const out4 = document.querySelector('.out-4');
-    out4.textContent = arr_04.length;
+	const out4 = document.querySelector('.out-4');
+	out4.textContent = arr_04.length;
 }
 
 document.querySelector('.b-4').addEventListener('click', t04);
@@ -34,11 +34,11 @@ document.querySelector('.b-4').addEventListener('click', t04);
 let arr_05 = ["elementary", "OS", 5.0, "Hera"];
 
 const t05 = (arr) => {
-   return arr.length;
+	return arr.length;
 }
 
 document.querySelector('.b-5').addEventListener('click', () => {
-    document.querySelector('.out-5').textContent = t05(arr_05);
+	document.querySelector('.out-5').textContent = t05(arr_05);
 });
 
 
@@ -49,8 +49,8 @@ document.querySelector('.b-5').addEventListener('click', () => {
 const arr_06 = [];
 
 const t06 = () => {
-    arr_06.push(90, 60);
-    console.log(arr_06);
+	arr_06.push(90, 60);
+	console.log(arr_06);
 }
 document.querySelector('.b-6').addEventListener('click', t06);
 
@@ -61,9 +61,9 @@ document.querySelector('.b-6').addEventListener('click', t06);
 const arr_07 = ["OS", "Windows"];
 
 const t07 = () => {
-    arr_07[1] = "Arch";
-    arr_07[2] = "Linux";
-    console.log(arr_07);
+	arr_07[1] = "Arch";
+	arr_07[2] = "Linux";
+	console.log(arr_07);
 }
 
 document.querySelector('.b-7').addEventListener('click', t07);
@@ -75,11 +75,11 @@ document.querySelector('.b-7').addEventListener('click', t07);
 const arr_08 = ["OS", "Windows"];
 
 const t08 = () => {
-    const out8 = document.querySelector('.out-8');
-    arr_08[1] = "Open";
-    arr_08[20] = "Linux";
-    console.log(arr_08);
-    out8.textContent = arr_08.length;
+	const out8 = document.querySelector('.out-8');
+	arr_08[1] = "Open";
+	arr_08[20] = "Linux";
+	console.log(arr_08);
+	out8.textContent = arr_08.length;
 }
 
 document.querySelector('.b-8').addEventListener('click', t08);
@@ -92,9 +92,9 @@ document.querySelector('.b-8').addEventListener('click', t08);
 const arr_09 = [1111, 2222];
 
 const t09 = () => {
-    let i9 = +document.querySelector('.i-9').value;
-    arr_09.push(i9);
-    console.log(arr_09);
+	let i9 = +document.querySelector('.i-9').value;
+	arr_09.push(i9);
+	console.log(arr_09);
 }
 
 document.querySelector('.b-9').addEventListener('click', t09);
@@ -106,8 +106,8 @@ document.querySelector('.b-9').addEventListener('click', t09);
 const arr_10 = ["CentOS", "Mandriva Linux", "EduLinux", "Fedora", "Mageia"];
 
 const t10 = () => {
-    arr_10.pop();
-    console.log(arr_10);
+	arr_10.pop();
+	console.log(arr_10);
 }
 
 document.querySelector('.b-10').addEventListener('click', t10);
@@ -119,9 +119,9 @@ document.querySelector('.b-10').addEventListener('click', t10);
 const arr_11 = ["SUSE", "Unbreakable Linux", "Yellow Dog", "Slackware"];
 
 const t11 = () => {
-    let i11 = document.querySelector('.i-11').value;
-    arr_11.unshift(i11);
-    console.log(arr_11);
+	let i11 = document.querySelector('.i-11').value;
+	arr_11.unshift(i11);
+	console.log(arr_11);
 }
 
 document.querySelector('.b-11').addEventListener('click', t11);
@@ -133,8 +133,8 @@ document.querySelector('.b-11').addEventListener('click', t11);
 const arr_12 = ["Slackware", "Почему", "Патрик", "Бог"];
 
 const t12 = () => {
-    arr_12.shift();
-    console.log(arr_12);
+	arr_12.shift();
+	console.log(arr_12);
 }
 
 document.querySelector('.b-12').addEventListener('click', t12);
@@ -146,8 +146,8 @@ document.querySelector('.b-12').addEventListener('click', t12);
 const arr_13 = ["Slackware", "Slax", "Porteus", "Alpine Linux"];
 
 const t13 = () => {
-    const out13 = document.querySelector('.out-13');
-    out13.textContent = arr_13.join('_');
+	const out13 = document.querySelector('.out-13');
+	out13.textContent = arr_13.join('_');
 }
 
 document.querySelector('.b-13').addEventListener('click', t13);
@@ -159,10 +159,10 @@ document.querySelector('.b-13').addEventListener('click', t13);
 const arr_14 = [19.1, 20.04, 20.1, 21.04];
 
 const t14 = () => {
-    const out14 = document.querySelector('.out-14');
-    for (let i = 0; i < arr_14.length; i++) {
-        out14.textContent += arr_14[i] + '_';
-    }
+	const out14 = document.querySelector('.out-14');
+	for (let i = 0; i < arr_14.length; i++) {
+		out14.textContent += arr_14[i] + '_';
+	}
 
 }
 
@@ -175,10 +175,10 @@ document.querySelector('.b-14').addEventListener('click', t14);
 const arr_15 = [22, 33, 44, 55, 65, 66, 67, 68];
 
 const t15 = () => {
-    const out15 = document.querySelector('.out-15');
-    for (let i = 0; i < arr_15.length; i++) {
-        if(arr_15[i] % 2 == 0) out15.textContent += arr_15[i] + '_';
-    }
+	const out15 = document.querySelector('.out-15');
+	for (let i = 0; i < arr_15.length; i++) {
+		if (arr_15[i] % 2 == 0) out15.textContent += arr_15[i] + '_';
+	}
 }
 
 document.querySelector('.b-15').addEventListener('click', t15);
@@ -191,10 +191,10 @@ document.querySelector('.b-15').addEventListener('click', t15);
 const arr_16 = ["Warty Warthog", "Hoary Hedgehog", "Breezy Badger", "Dapper Drake"];
 
 const t16 = () => {
-    const out16 = document.querySelector('.out-16');
-    for (let i = 0; i < arr_16.length; i++) {
-       if(i % 2 == 0) out16.textContent += arr_16[i] + '_';
-    }
+	const out16 = document.querySelector('.out-16');
+	for (let i = 0; i < arr_16.length; i++) {
+		if (i % 2 == 0) out16.textContent += arr_16[i] + '_';
+	}
 }
 
 document.querySelector('.b-16').addEventListener('click', t16);
@@ -209,11 +209,11 @@ const arr_17 = ["Edgy Eft", "Feisty Fawn", "Gutsy Gibbon"];
 console.log(arr_17);
 
 const t17 = () => {
-    const out17 = document.querySelector('.out-17');
-    for (let i = arr_17.length - 1; i >= 0; i--) {
-       out17.textContent += arr_17[i] + '_';
-       console.log(arr_17[1]);
-    }
+	const out17 = document.querySelector('.out-17');
+	for (let i = arr_17.length - 1; i >= 0; i--) {
+		out17.textContent += arr_17[i] + '_';
+		console.log(arr_17[1]);
+	}
 }
 
 document.querySelector('.b-17').addEventListener('click', t17);
@@ -225,9 +225,9 @@ document.querySelector('.b-17').addEventListener('click', t17);
 const arr_18 = ["Hardy", "Heron", "Intrepid", "Ibex", "Jaunty", "Jackalope", "Lucid", "Lynx", "Maverick"];
 
 const t18 = () => {
-    const out18 = document.querySelector('.out-18');
-    const elems = arr_18[0] + ' ' + arr_18[1] + ' ' + arr_18[5] + ' ' + arr_18[7];
-    out18.textContent = elems;
+	const out18 = document.querySelector('.out-18');
+	const elems = arr_18[0] + ' ' + arr_18[1] + ' ' + arr_18[5] + ' ' + arr_18[7];
+	out18.textContent = elems;
 }
 
 document.querySelector('.b-18').addEventListener('click', t18);
@@ -238,10 +238,10 @@ document.querySelector('.b-18').addEventListener('click', t18);
 const arr_19 = [11, 22, 33];
 
 const t19 = () => {
-    const out19 = document.querySelector('.out-19');
-    for (let i = 0; i < arr_19.length; i++) {
-         out19.innerHTML += `${i} : ${arr_19[i]}<br>`;
-     }
+	const out19 = document.querySelector('.out-19');
+	for (let i = 0; i < arr_19.length; i++) {
+		out19.innerHTML += `${i} : ${arr_19[i]}<br>`;
+	}
 }
 
 document.querySelector('.b-19').addEventListener('click', t19);
@@ -253,9 +253,9 @@ document.querySelector('.b-19').addEventListener('click', t19);
 const arr_20 = [];
 
 const t20 = () => {
-    const out20 = document.querySelector('.out-20');
-    out20.innerHTML = arr_20[100];
-    
+	const out20 = document.querySelector('.out-20');
+	out20.innerHTML = arr_20[100];
+
 }
 
 document.querySelector('.b-20').addEventListener('click', t20);
@@ -267,12 +267,12 @@ document.querySelector('.b-20').addEventListener('click', t20);
 const arr_21 = ['aa', 'bb', 'cc'];
 
 const t21 = () => {
-    let i21 = document.querySelector('.i-21').value;
-    const out21 = document.querySelector('.out-21');
-    if(arr_21.length < 10){ 
-        arr_21.push(i21);
-        out21.textContent = arr_21.join();
-    }
+	let i21 = document.querySelector('.i-21').value;
+	const out21 = document.querySelector('.out-21');
+	if (arr_21.length < 10) {
+		arr_21.push(i21);
+		out21.textContent = arr_21.join('_');
+	}
 }
 
 document.querySelector('.b-21').addEventListener('click', t21);
@@ -284,17 +284,17 @@ document.querySelector('.b-21').addEventListener('click', t21);
 const arr_22 = [101, 201, 301, 401];
 
 const t22 = (n) => {
-    const out22 = document.querySelector('.out-22');
-    for (let i = 0; i < arr_22.length; i++) {
-        if(arr_22[i] === n){
-           return out22.textContent = 1;
-        }
-    }
-    return out22.textContent = 0;
+	const out22 = document.querySelector('.out-22');
+	for (let i = 0; i < arr_22.length; i++) {
+		if (arr_22[i] === n) {
+			return out22.textContent = 1;
+		}
+	}
+	return out22.textContent = 0;
 }
 
 document.querySelector('.b-22').addEventListener('click', () => {
-    t22(201);
+	t22(201);
 });
 
 
@@ -302,15 +302,15 @@ document.querySelector('.b-22').addEventListener('click', () => {
 // Функция получает два массива как аргументы. Сравнивает их длину. Если длины совпадают - возвращает true, если не совпадают - false.
 
 const t23 = (m1, m2) => {
-if(m1.length == m2.length){
-    return true;
-}else{
-    return false;
-}
+	if (m1.length == m2.length) {
+		return true;
+	} else {
+		return false;
+	}
 }
 
 document.querySelector('.b-23').addEventListener('click', () => {
-   document.querySelector('.out-23').textContent =  t23([44, 55] , [66, 77]);
+	document.querySelector('.out-23').textContent = t23([44, 55], [66, 77]);
 });
 
 
@@ -319,15 +319,15 @@ document.querySelector('.b-23').addEventListener('click', () => {
 
 
 const t24 = (m1, m2) => {
-    if (!t23(m1, m2)) return false;
-    for (let i = 0; i < m1.length; i++) {
-        if (m1[i] !== m2[i]) return false;
-    }
-    return true;
+	if (!t23(m1, m2)) return false;
+	for (let i = 0; i < m1.length; i++) {
+		if (m1[i] !== m2[i]) return false;
+	}
+	return true;
 }
 
 document.querySelector('.b-24').addEventListener('click', () => {
-   document.querySelector('.out-24').textContent =  t24([44, 55] , [44, 55]);
+	document.querySelector('.out-24').textContent = t24([44, 55], [44, 55]);
 });
 
 
@@ -335,13 +335,13 @@ document.querySelector('.b-24').addEventListener('click', () => {
 // Изучите работу функции. Разберитесь, что она делает.
 
 const t25 = (arr) => {
-    let s = 0;
-    for (let i = 0; i < arr.length; i++) {
-        s += arr[i];
-    }
-    return s;
+	let s = 0;
+	for (let i = 0; i < arr.length; i++) {
+		s += arr[i];
+	}
+	return s;
 }
 
 document.querySelector('.b-25').addEventListener('click', () => {
-   document.querySelector('.out-25').textContent =  t25([44, 55]);
+	document.querySelector('.out-25').textContent = t25([44, 55]);
 });
