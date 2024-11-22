@@ -4,32 +4,32 @@
 // Функция должна принимать два аргумента - массив и значение и возращать количество таких значений в массиве.
 
 const t01 = (arr, val) => {
-    let res1 = 0;
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] == val) ++res1;
-    }
-    return res1;
+	let res1 = 0;
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i] == val) ++res1;
+	}
+	return res1;
 };
 
 document.querySelector('.b-1').addEventListener('click', () => {
-    const arr_01 = [22, 33, 44, 55, 66, 33, 22, 33, 44, 22, 44, 33];
-    document.querySelector('.out-1').textContent = t01(arr_01, 33);
+	const arr_01 = [22, 33, 44, 55, 66, 33, 22, 33, 44, 22, 44, 33];
+	document.querySelector('.out-1').textContent = t01(arr_01, 33);
 });
 
 // Task 02
 // Функция должна принимать два аргумента - массив и значение и возвращать массив индексов вхождения значений в массив.
 
 const t02 = (arr, val) => {
-    let newArr2 = [];
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] == val) newArr2.push(i);
-    }
-    return newArr2;
+	let newArr2 = [];
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i] == val) newArr2.push(i);
+	}
+	return newArr2;
 };
 
 document.querySelector('.b-2').addEventListener('click', () => {
-    const arr_02 = [22, 33, 44, 55, 66, 33, 22, 33, 44, 22, 44, 33];
-    document.querySelector('.out-2').textContent = t02(arr_02, 33);
+	const arr_02 = [22, 33, 44, 55, 66, 33, 22, 33, 44, 22, 44, 33];
+	document.querySelector('.out-2').textContent = t02(arr_02, 33);
 });
 
 
@@ -37,15 +37,15 @@ document.querySelector('.b-2').addEventListener('click', () => {
 // Функция должна принимать три аргумента - массив и значение1 и значение2. Функция должна возвращать массив где все вхождения значения1 заменены на значение2.
 
 const t03 = (arr, val1, val2) => {
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] == val1) arr[i] = val2;
-    }
-    return arr;
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i] == val1) arr[i] = val2;
+	}
+	return arr;
 };
 
 document.querySelector('.b-3').addEventListener('click', () => {
-    const arr_03 = [22, 33, 44, 55, 66, 33, 22, 33, 44, 22, 44, 33];
-    document.querySelector('.out-3').textContent = t03(arr_03, 33, 0);
+	const arr_03 = [22, 33, 44, 55, 66, 33, 22, 33, 44, 22, 44, 33];
+	document.querySelector('.out-3').textContent = t03(arr_03, 33, 0);
 });
 
 
@@ -53,14 +53,14 @@ document.querySelector('.b-3').addEventListener('click', () => {
 // Функция должна принимать два аргумента - массив и значение. Функция должна заменить первое вхождение значения в массив на нуль и возвратить массив.
 
 const t04 = (arr, val1) => {
-    let elem = arr.indexOf(val1);
-    arr[elem] = 0;
-    return arr
+	let elem = arr.indexOf(val1);
+	arr[elem] = 0;
+	return arr
 };
 
 document.querySelector('.b-4').addEventListener('click', () => {
-    const arr_04 = [22, 33, 44, 55, 66, 33, 22, 33, 44, 22, 44, 33];
-    document.querySelector('.out-4').textContent = t04(arr_04, 33);
+	const arr_04 = [22, 33, 44, 55, 66, 33, 22, 33, 44, 22, 44, 33];
+	document.querySelector('.out-4').textContent = t04(arr_04, 33);
 });
 
 
@@ -68,14 +68,14 @@ document.querySelector('.b-4').addEventListener('click', () => {
 // Функция должна принимать два аргумента - массив и значение. Функция должна заменить последнее вхождение значения в массив на нуль и возвратить массив.
 
 const t05 = (arr, val1) => {
-    let elem = arr.lastIndexOf(val1);
-    arr[elem] = 0;
-    return arr
+	let elem = arr.lastIndexOf(val1);
+	arr[elem] = 0;
+	return arr
 };
 
 document.querySelector('.b-5').addEventListener('click', () => {
-    const arr_05 = [22, 33, 44, 55, 66, 33, 22, 33, 44, 22, 44, 33];
-    document.querySelector('.out-5').textContent = t05(arr_05, 33);
+	const arr_05 = [22, 33, 44, 55, 66, 33, 22, 33, 44, 22, 44, 33];
+	document.querySelector('.out-5').textContent = t05(arr_05, 33);
 });
 
 
@@ -83,14 +83,14 @@ document.querySelector('.b-5').addEventListener('click', () => {
 // Функция должна принимать два массива и проверять, что входящие в них элементы равны. Под равенством понимается сравнение по типу (строгое), по значению, и по положению в массиве. Функция должна возвращать true/false.
 
 const t06 = (arr1, arr2) => {
-    if(arr1.length != arr2.length) return false;
-    for (let i = 0; i < arr1.length; i++) {
-        if(arr1[i] !== arr2[i]) return false;
-    }
-    return true;
+	if (arr1.length != arr2.length) return false;
+	for (let i = 0; i < arr1.length; i++) {
+		if (arr1[i] !== arr2[i]) return false;
+	}
+	return true;
 };
 document.querySelector('.b-6').addEventListener('click', () => {
-    document.querySelector('.out-6').textContent = t06([33, 44], [33, 44]);
+	document.querySelector('.out-6').textContent = t06([33, 44], [33, 44]);
 });
 
 
@@ -98,15 +98,15 @@ document.querySelector('.b-6').addEventListener('click', () => {
 // Функция должна принимать массив и с помощью метода find искать в нем первое значение которое больше 10 но меньше 13 и возвращать данное значение.
 
 const t07 = (arr1) => {
-   let res07 = arr1.find((item) => {
-          if (item > 10 && item < 13) return item;
-    })
-    return res07;
+	let res07 = arr1.find((item) => {
+		if (item > 10 && item < 13) return item;
+	})
+	return res07;
 };
 
 document.querySelector('.b-7').addEventListener('click', () => {
-    const arr_07 = [1, 2, 3, 4, 4, 5, 66, 22, 12, 13, 14];
-    document.querySelector('.out-7').textContent = t07(arr_07);
+	const arr_07 = [1, 2, 3, 4, 4, 5, 66, 22, 12, 13, 14];
+	document.querySelector('.out-7').textContent = t07(arr_07);
 });
 
 
@@ -114,16 +114,16 @@ document.querySelector('.b-7').addEventListener('click', () => {
 // Функция должна принимать массив и с помощью метода find искать в нем последнее значение которое больше 10 но меньше 13 и возвращать данное значение.
 
 const t08 = (arr1) => {
-    let res08 = arr1.findLast((item) => {
-        if (item > 10 && item < 13 ) return item;
-        
-  })
-    return res08;
+	let res08 = arr1.findLast((item) => {
+		if (item > 10 && item < 13) return item;
+
+	})
+	return res08;
 };
 
 document.querySelector('.b-8').addEventListener('click', () => {
-    const arr_08 = [1, 12, 3, 4, 4, 5, 66, 22, 12, 11, 14];
-    document.querySelector('.out-8').textContent = t08(arr_08);
+	const arr_08 = [1, 12, 3, 4, 4, 5, 66, 22, 12, 11, 14];
+	document.querySelector('.out-8').textContent = t08(arr_08);
 });
 
 
@@ -131,12 +131,14 @@ document.querySelector('.b-8').addEventListener('click', () => {
 // Функция должна принимать массив и значение. Функция должна искать вхождение (не строгое) значения в массив, и возвращать первый индекс вхождения.
 
 const t09 = (arr, val) => {
-   return arr.indexOf(val);
+	for (i = 0; i < arr.length; i++) {
+		if (arr[i] == val) return i;
+	}
 };
 
 document.querySelector('.b-9').addEventListener('click', () => {
-    const arr_09 = [1, 12, 3, 4, 4, 5];
-    document.querySelector('.out-9').textContent = t09(arr_09, 4);
+	const arr_09 = [1, 12, 3, 4, 4, 5];
+	document.querySelector('.out-9').textContent = t09(arr_09, 4);
 });
 
 
@@ -144,12 +146,14 @@ document.querySelector('.b-9').addEventListener('click', () => {
 // Функция должна принимать массив и значение. Функция должна искать вхождение (не строгое) значения в массив, и возвращать последний индекс вхождения.
 
 const t10 = (arr, val) => {
-    return arr.lastIndexOf(val);
+	for (i = arr.length; i > 0; i--) {
+		if (arr[i] == val) return i;
+	}
 };
 
 document.querySelector('.b-10').addEventListener('click', () => {
-    const arr_10 = [1, 12, 3, 4, 4, 5];
-    document.querySelector('.out-10').textContent = t10(arr_10, 4);
+	const arr_10 = [1, 12, 3, 4, 4, 5];
+	document.querySelector('.out-10').textContent = t10(arr_10, 4);
 });
 
 
@@ -160,16 +164,16 @@ let arr_11 = [10, 20, 30, 40];
 let res_11 = [];
 
 const t11 = () => {
-    res_11 = [];
-    arr_11.forEach((item, index) => {
-        res_11.push(index);
-    });
-    
+	res_11 = [];
+	arr_11.forEach((item, index) => {
+		res_11.push(index);
+	});
+
 };
 
 document.querySelector('.b-11').addEventListener('click', () => {
-    t11();
-    document.querySelector('.out-11').textContent = res_11;
+	t11();
+	document.querySelector('.out-11').textContent = res_11;
 });
 
 
@@ -181,15 +185,15 @@ let arr_12 = [10, 20, 30, 40];
 let res_12 = [];
 
 const t12 = () => {
-    res_12 = [];
-    arr_12.forEach((item, index) => {
-        if(item % 2 == 0) res_12.push(index);
-     });
+	res_12 = [];
+	arr_12.forEach((item, index) => {
+		if (item % 2 == 0) res_12.push(index);
+	});
 };
 
 document.querySelector('.b-12').addEventListener('click', () => {
-    t12();
-    document.querySelector('.out-12').textContent = res_12;
+	t12();
+	document.querySelector('.out-12').textContent = res_12;
 });
 
 // Task 13
