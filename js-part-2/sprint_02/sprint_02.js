@@ -126,8 +126,8 @@ const arr_08 = ["OS", "Windows"];
 
 const t08 = (arr) => {
    const arrClon = [];
-   for (let i = 0; i < arr_08.length; i++) {
-    arrClon[i] = arr_08[i];
+   for (let i = 0; i < arr.length; i++) {
+    arrClon[i] = arr[i];
    }
    return arrClon;
 }
@@ -173,7 +173,8 @@ let arr_11 = ["SUSE", "Unbreakable Linux", "Yellow Dog", "Slackware"];
 const t11 = () => {
  const i11 = document.querySelector('.i-11').value;
  const out11 = document.querySelector('.out-11');
- out11.textContent = [i11, ...arr_11].join(' ');
+ arr_11 = [i11, ...arr_11];
+ out11.textContent = arr_11.join(' ');
 }
 
 document.querySelector('.b-11').addEventListener('click', t11);
@@ -314,7 +315,7 @@ arr_20[10] = 200;
 let res_20 = [];
 
 const t20 = () => {
-    const res_20 = arr_20.map((item) => item * 2);
+    res_20 = arr_20.map((item) => item * 2);
     console.log(res_20);
 }
 
