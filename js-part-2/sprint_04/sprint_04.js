@@ -13,15 +13,13 @@ const t01 = () => {
     let res1 = '';
     const out1 = document.querySelector('.out-1');
     for (let i = 0; i <= 4; i++) {
-        res1 += (4 - i) + '=' + 4 + ' ';
-
+        res1 += (4 - i) + '=';
         for (let k = 4; k >= 0; k--) {
             res1 += k + ' ';
             console.log(res1);
         }
     }
     out1.innerHTML = res1;
-
 };
 
 document.querySelector('.b-1').addEventListener('click', t01);
@@ -139,13 +137,12 @@ const t07 = () => {
     for (let i = 0; i <= 4; i++) {
         res7 += '| ';
         for (let k = 0; k < 4; k++) {
-            if (i === 0 || i === 4) res7 += " - ";
-            else res7 += " * ";
+            if (i === 0 || i === 4) res7 += "- ";
+            else res7 += "* ";
         }
         res7 += '|<br>';
     }
     out7.innerHTML = res7;
-
 };
 
 document.querySelector('.b-7').addEventListener('click', t07);
