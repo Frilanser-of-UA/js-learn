@@ -37,3 +37,4 @@
 3) let ues = 'und' in hotel; оператор in проверяет существует ли ключ в обекте вернет
     true или false. hasOwnProperty делает тоже самоє
 4) delete object.svoystvo удаляет свойство из обекта 
+5) for (let key in obj){} цыкл для обєктов
