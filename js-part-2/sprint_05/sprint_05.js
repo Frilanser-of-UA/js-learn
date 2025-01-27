@@ -61,7 +61,7 @@ let arr_04 = [
 ];
 
 const t04 = () => {
-    return arr_04[0][0][0][3];
+    return arr_04[0][0][0][2];
 }
 
 document.querySelector('.b-4').addEventListener('click', () => $('.out-4').textContent = t04());
@@ -114,7 +114,7 @@ let arr_07 = [
 ];
 
 const t07 = () => {
-    return arr_07[2][2][0];
+    return arr_07[2][2][0][0];
 }
 
 document.querySelector('.b-7').addEventListener('click', () => $('.out-7').textContent = t07());
