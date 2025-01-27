@@ -104,7 +104,9 @@ document.querySelector('.b-7').addEventListener('click', () => console.log(t07([
 
 
 const t08 = (a, b) => {
-    if (a.length != b.length) return false;
+    a.sort();
+    b.sort();
+    if (a.length !== b.length) return false;
     for (let i = 0; i < a.length; i++) {
         if (a[i] !== b[i]) return false;
     }
@@ -119,8 +121,7 @@ document.querySelector('.b-8').addEventListener('click', () => console.log(t08([
 
 
 const t09 = (arr) => {
-    if (arr.includes(1, 2)) return true;
-    return false;
+    return arr.includes(1) && arr.includes(2);
 }
 
 document.querySelector('.b-9').addEventListener('click', () => console.log(t09([1, 2, 3, 1, 2, 3])));
