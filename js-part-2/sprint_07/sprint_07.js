@@ -110,8 +110,8 @@ const obj_08 = {
 const t08 = (obj) => {
     for (let key in obj) {
         if (typeof obj[key] === 'number') return true;
-        else return false
     }
+    return false
 }
 
 document.querySelector('.b-8').addEventListener('click', () => document.querySelector('.out-8').textContent = t08(obj_08));
@@ -194,9 +194,9 @@ const obj_13 = {
 
 const t13 = (obj, val) => {
     for (let key in obj) {
-        if (obj[key] == val) return true;
-        else return false;
+        if (obj[key] === val) return true;
     }
+    return false;
 }
 
 document.querySelector('.b-13').addEventListener('click', () => document.querySelector('.out-13').textContent = t13(obj_13, 17));
@@ -309,12 +309,11 @@ let arr_18 = [
 
 const t18 = () => {
     const out18 = document.querySelector('.out-18');
+    let res_18 = "";
     for (let i = 0; i < arr_18.length; i++) {
-        for (let key in arr_18[i]) {
-            if (arr_18[i][key] === arr_18[i].color) out18.textContent += arr_18[i][key] + ' ';
-        }
+        res_18 += arr_18[i].color + " ";
     }
-
+    out18.textContent = res_18;
 }
 
 document.querySelector('.b-18').addEventListener('click', t18);
@@ -343,5 +342,5 @@ document.querySelector('.b-19').addEventListener('click', t19);
 // Task 20
 // Cоздайте через let объект obj_20 с ключом One и значением 1 и ключом one со значением 2. Выведите в консоль.
 
-let obj_20 = { one: 1, one: 2 }
+let obj_20 = { One: 1, one: 2 }
 console.log(obj_20);
