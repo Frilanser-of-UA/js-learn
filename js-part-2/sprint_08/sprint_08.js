@@ -121,7 +121,7 @@ document.querySelector('.b-7').addEventListener('click', t07);
 let st_08 = new Set([22, 19, 16, 13, 10, 7]);
 
 const t08 = () => {
-    document.querySelector('.out-8').textContent = [...st_08].reverse().join('-');
+    document.querySelector('.out-8').textContent = [...st_08].reverse().join(' ');
 }
 
 document.querySelector('.b-8').addEventListener('click', t08);
