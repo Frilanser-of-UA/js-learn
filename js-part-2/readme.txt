@@ -67,9 +67,11 @@
 1) let str = new String("Hello" создаст обьект строку)
 2) str.toString() переведет в строку
 3) str[0] = D строки не изменние
-4) Получение подстроки qwerty.subString(1, 3) вернет новую строку we
-						qwerty.subString(3) вернет с 3го по последний
-						qwerty.subString(303) вернет пустую строку
+4) Получение подстроки qwerty.substring(1, 3) вернет новую строку we
+						qwerty.substring(3) вернет с 3го по последний
+						qwerty.substring(303) вернет пустую строку
 5) Поиск подстроки в строке indexOf(uw) вернет начало подстроки если нету вернет -1
 6) замена подстрок "string".raplace("st", "ST") вернет новую строку Заменит только первую подстроку
 7) "string string".raplaceAll("st", "ST") заменит все подстроки
+8) Отрезаем строку 'qwertyui'.slice(3)
+                    'qwertyui'.slice(3,6)

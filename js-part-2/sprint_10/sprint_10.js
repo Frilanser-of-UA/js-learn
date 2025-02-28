@@ -5,11 +5,11 @@
 // Напишите функцию, которая принимает строку как аргумент и возвращает длину строки. 
 
 const t01 = (str) => {
-    
+    return str.length;
 }
 
 document.querySelector('.b-1').addEventListener('click', () => {
-   document.querySelector('.out-1').textContent = t01('hello');
+    document.querySelector('.out-1').textContent = t01('hello');
 });
 
 
@@ -19,7 +19,10 @@ document.querySelector('.b-1').addEventListener('click', () => {
 let s2 = 'синзуны';
 
 const t02 = () => {
-   
+    const r2 = document.querySelector('.r-2').value;
+    const out2 = document.querySelector('.out-2');
+    out2.textContent = s2[r2];
+
 }
 
 document.querySelector('.r-2').addEventListener('input', t02);
@@ -32,7 +35,9 @@ document.querySelector('.r-2').addEventListener('input', t02);
 let s3 = 'суилик';
 
 const t03 = () => {
-    
+    const i3 = document.querySelector('.i-3').value;
+    const out3 = document.querySelector('.out-3');
+    out3.textContent = s3.includes(i3);
 }
 
 document.querySelector('.b-3').addEventListener('click', t03);
@@ -44,7 +49,14 @@ document.querySelector('.b-3').addEventListener('click', t03);
 
 
 const t04 = (str) => {
-   
+    let res04 = '';
+    if (str.length < 10) {
+        for (let i = 0; i < 10 - str.length; i++) {
+            res04 += '0';
+        }
+        return str + res04;
+    } else return str;
+
 }
 
 document.querySelector('.b-4').addEventListener('click', () => {
@@ -58,7 +70,13 @@ document.querySelector('.b-4').addEventListener('click', () => {
 
 
 const t05 = (str) => {
-
+    let res05 = '';
+    if (str.length < 10) {
+        for (let i = 0; i < 10 - str.length; i++) {
+            res05 += '0';
+        }
+        return res05 + str;
+    } else return str;
 }
 
 document.querySelector('.b-5').addEventListener('click', () => {
@@ -73,7 +91,12 @@ document.querySelector('.b-5').addEventListener('click', () => {
 let t6 = 'Рессан';
 
 const t06 = () => {
-   
+    let res06 = '';
+    for (let i = 0; i < t6.length; i++) {
+        if (i % 2 === 0) res06 += '0';
+        else res06 += t6[i];
+    }
+    return res06;
 }
 
 
@@ -89,7 +112,9 @@ document.querySelector('.b-6').addEventListener('click', () => {
 let s7 = 'ксилл';
 
 const t07 = () => {
-    
+    const out7 = document.querySelector('.out-7');
+    let res07 = s7.split('').reverse().join('');
+    out7.textContent = res07;
 }
 
 document.querySelector('.b-7').addEventListener('click', t07);
@@ -101,7 +126,9 @@ document.querySelector('.b-7').addEventListener('click', t07);
 let s8 = 'И_тогда_сыновья_Света,_каждые_на_своей_звезде,_начнут_бороться';
 
 const t08 = () => {
-    
+    const out8 = document.querySelector('.out-8');
+    let res08 = s8.replaceAll('_', ' ');
+    out8.textContent = res08;
 }
 
 document.querySelector('.b-8').addEventListener('click', t08);
@@ -110,13 +137,14 @@ document.querySelector('.b-8').addEventListener('click', t08);
 // Task 09
 // Напишите функцию, которая проверяет, что вводимая строка - палиндром. Функция возвращает true/false. Функция должна не обращать внимание на регистр.
 
-let s9  = 'сианкор рокнаис';
+let s9 = 'сианкор рокнаис';
 
 const t09 = (str) => {
-    
+    let newSt09 = str.toLowerCase().split('').reverse().join('');
+    return str.toLowerCase() === newSt09
 }
 
-document.querySelector('.b-9').addEventListener('click', ()=> {
+document.querySelector('.b-9').addEventListener('click', () => {
     document.querySelector('.out-9').innerHTML = t09(s9);
 });
 
@@ -128,7 +156,9 @@ document.querySelector('.b-9').addEventListener('click', ()=> {
 let s10 = 'Ассента звезды Суин, расположенной на краю их Вселенной.';
 
 const t10 = () => {
-    
+    let num10 = s10.indexOf('Вселенной');
+    let lastNum10 = s10.length - 1;
+    return s10.substring(num10, lastNum10);
 }
 
 document.querySelector('.b-10').addEventListener('click', () => {
@@ -142,7 +172,8 @@ document.querySelector('.b-10').addEventListener('click', () => {
 let s11 = 'Два ксилла были захвачены мисликами врасплох';
 
 const t11 = () => {
-   
+    let num11 = 'Два ксилла'
+    return s11.substring(0, num11.length);
 }
 
 document.querySelector('.b-11').addEventListener('click', () => {
@@ -155,7 +186,9 @@ document.querySelector('.b-11').addEventListener('click', () => {
 let s12 = 'чью красную кровь нельзя заморозить';
 
 const t12 = () => {
-    
+    let num12 = s12.indexOf('заморозить');
+    let lastNum12 = s12.length;
+    return s12.substring(num12, lastNum12);
 }
 
 document.querySelector('.b-12').addEventListener('click', () => {
@@ -168,7 +201,7 @@ document.querySelector('.b-12').addEventListener('click', () => {
 let s13 = 'Итак, мислики были обнаружены менее чем в миллионе световых лет от Эллы.';
 
 const t13 = () => {
-   
+    document.querySelector('.out-13').textContent = s13.lastIndexOf('лл');
 }
 
 document.querySelector('.b-13').addEventListener('click', t13);
@@ -177,20 +210,22 @@ document.querySelector('.b-13').addEventListener('click', t13);
 // Напишите функцию, которая проверяет, что в строку входит символ '@'. Возвращает true/false.
 
 const t14 = (str) => {
+    return str.includes('@');
 }
 
 document.querySelector('.b-14').addEventListener('click', () => {
-   document.querySelector('.out-14').innerHTML = t14('hello@mail');
+    document.querySelector('.out-14').innerHTML = t14('hello@mail');
 });
 
 // Task 15
 // Напишите функцию, которая проверяет, что в строку входит символ '@' и данный символ не является первым или последним символом строки. Возвращает true/false. 
 
 const t15 = (str) => {
+    return str.includes('@') && str.indexOf('@') !== 0 && str.indexOf('@') !== str.length - 1;
 }
 
 document.querySelector('.b-15').addEventListener('click', () => {
-   document.querySelector('.out-15').innerHTML = t15('hello@mail');
+    document.querySelector('.out-15').innerHTML = t15('hello@mail');
 });
 
 // Task 16
@@ -199,6 +234,7 @@ document.querySelector('.b-15').addEventListener('click', () => {
 let s16 = 'Теперь иссы умели уничтожать мисликов: достаточно было подвергнуть их облучению, которое хотя бы на десять секунд поднимало окружающую температуру до -73°C.';
 
 const t16 = () => {
+    document.querySelector('.out-16').textContent = s16.replace('-73°C', '200K');
 }
 
 document.querySelector('.b-16').addEventListener('click', t16);
@@ -210,6 +246,10 @@ let s17 = 'Мало-помалу я прижился на Элле';
 
 
 const t17 = () => {
+    const out17 = document.querySelector('.out-17');
+    let num17 = s17.indexOf('Элле');
+    let lastNum17 = s17.length - 1;
+    out17.textContent = s17.slice(num17, lastNum17);
 }
 
 document.querySelector('.b-17').addEventListener('click', t17);
@@ -222,6 +262,9 @@ let s18 = 'Ассза посадил реоб на маленькую площа
 
 
 const t18 = () => {
+    const out18 = document.querySelector('.out-18');
+    let num18 = 'Ассза';
+    out18.textContent = s18.slice(0, num18.length);
 }
 
 document.querySelector('.b-18').addEventListener('click', t18);
@@ -234,6 +277,11 @@ let s19 = '— Взгляни на мислика, — сказал Ассза.'
 
 
 const t19 = () => {
+    const out19 = document.querySelector('.out-19');
+    let start19 = s19.indexOf('на мислика');
+    let finish19 = start19 + 'на мислика'.length;
+    out19.textContent = s19.slice(start19, finish19);
+
 }
 
 document.querySelector('.b-19').addEventListener('click', t19);
@@ -247,7 +295,8 @@ let bar_20 = 49;
 
 
 const t20 = () => {
-   
+    const out20 = document.querySelector('.out-20');
+    out20.textContent = String.fromCharCode(foo_20, bar_20).split('').join(' ');
 }
 
 document.querySelector('.b-20').addEventListener('click', t20);
