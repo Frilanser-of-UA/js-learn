@@ -156,9 +156,7 @@ document.querySelector('.b-9').addEventListener('click', () => {
 let s10 = 'Ассента звезды Суин, расположенной на краю их Вселенной.';
 
 const t10 = () => {
-    let num10 = s10.indexOf('Вселенной');
-    let lastNum10 = s10.length - 1;
-    return s10.substring(num10, lastNum10);
+    return s10.substring(46, 55);
 }
 
 document.querySelector('.b-10').addEventListener('click', () => {
@@ -172,8 +170,7 @@ document.querySelector('.b-10').addEventListener('click', () => {
 let s11 = 'Два ксилла были захвачены мисликами врасплох';
 
 const t11 = () => {
-    let num11 = 'Два ксилла'
-    return s11.substring(0, num11.length);
+    return s11.substring(0, 10);
 }
 
 document.querySelector('.b-11').addEventListener('click', () => {
@@ -186,9 +183,7 @@ document.querySelector('.b-11').addEventListener('click', () => {
 let s12 = 'чью красную кровь нельзя заморозить';
 
 const t12 = () => {
-    let num12 = s12.indexOf('заморозить');
-    let lastNum12 = s12.length;
-    return s12.substring(num12, lastNum12);
+    return s12.substring(25, 35);
 }
 
 document.querySelector('.b-12').addEventListener('click', () => {
@@ -242,14 +237,11 @@ document.querySelector('.b-16').addEventListener('click', t16);
 // Task 17
 // Напишите функцию, которая с помощью slice создает на базе s17 новую строку с содержимым 'Элле'. Выводит результат в .out-17.
 
-let s17 = 'Мало-помалу я прижился на Элле';
-
+let s17 = 'Мало-помалу я прижился на Элле sdsd';
 
 const t17 = () => {
     const out17 = document.querySelector('.out-17');
-    let num17 = s17.indexOf('Элле');
-    let lastNum17 = s17.length - 1;
-    out17.textContent = s17.slice(num17, lastNum17);
+    out17.textContent = s17.slice(26, 30);
 }
 
 document.querySelector('.b-17').addEventListener('click', t17);
@@ -260,11 +252,9 @@ document.querySelector('.b-17').addEventListener('click', t17);
 
 let s18 = 'Ассза посадил реоб на маленькую площадку';
 
-
 const t18 = () => {
     const out18 = document.querySelector('.out-18');
-    let num18 = 'Ассза';
-    out18.textContent = s18.slice(0, num18.length);
+    out18.textContent = s18.slice(0, 5);
 }
 
 document.querySelector('.b-18').addEventListener('click', t18);
@@ -278,9 +268,7 @@ let s19 = '— Взгляни на мислика, — сказал Ассза.'
 
 const t19 = () => {
     const out19 = document.querySelector('.out-19');
-    let start19 = s19.indexOf('на мислика');
-    let finish19 = start19 + 'на мислика'.length;
-    out19.textContent = s19.slice(start19, finish19);
+    out19.textContent = s19.slice(10, 20);
 
 }
 
