@@ -15,7 +15,7 @@ document.querySelector('.out-1').addEventListener('click', t01);
 
 
 function t02() {
-    this.textContent = this.classList.contains('out');
+    document.querySelector('.out-2').textContent = this.classList.contains('out');
 }
 
 document.querySelector('.out-2').addEventListener('click', t02);
@@ -163,8 +163,7 @@ const monitor = {
     },
     isPortrait: function () {
         let a = this.screen();
-        if (a.width > a.height) return true;
-        else return false;
+        return a.height > a.width;
     },
     innerSize: function () {
         return {
@@ -192,7 +191,7 @@ const monitor = {
         let mathRatio = Math.trunc(x.width / x.height * 100);
         let y = this.isPortrait();
         let res = '';
-        if (y === true) {
+        if (y) {
             switch (mathRatio) {
                 case 125:
                     res = '5:4'
