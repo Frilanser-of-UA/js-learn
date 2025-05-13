@@ -187,49 +187,20 @@ const monitor = {
         return Math.round(window.scrollY);
     },
     aspectRatio: function () {
-        let x = this.screen();
-        let mathRatio = Math.trunc(x.width / x.height * 100);
-        let y = this.isPortrait();
-        let res = '';
-        if (y) {
-            switch (mathRatio) {
-                case 125:
-                    res = '5:4'
-                    break;
-                case 133:
-                    res = '4:3'
-                    break;
-                case 160:
-                    res = '16:9'
-                    break;
-                case 177:
-                    res = '16:10'
-                    break;
-                default:
-                    res = "Вашего монитора нету в списке"
-                    break;
-            };
-        } else {
-            switch (mathRatio) {
-                case 80:
-                    res = '4:5'
-                    break;
-                case 75:
-                    res = '3:4'
-                    break;
-                case 56:
-                    res = '9:16'
-                    break;
-                case 62:
-                    res = '10:16'
-                    break;
-                default:
-                    res = "Вашего монитора нету в списке"
-                    break;
-            };
-        }
-        return res
-    }
+        const { width, height } = this.screen();
+        const ratios = {
+            125: '5:4',
+            133: '4:3',
+            160: '16:9',
+            177: '16:10',
+            80: '4:5',
+            75: '3:4',
+            56: '9:16',
+            62: '10:16'
+        };
+        const mathRatio = Math.trunc((width / height) * 100);
+        return ratios[mathRatio];
+    },
 }
 
 // Проверка - снимите комментарий.
